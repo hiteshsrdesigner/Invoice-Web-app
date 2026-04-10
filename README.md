@@ -1,4 +1,4 @@
-# Green Life Invoice Generator
+# Mauli Solar Solution Invoice Generator
 
 A full-stack billing system that generates pixel-perfect PDFs matching the Green Life Solutions Proforma Invoice template.
 
