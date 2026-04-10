@@ -13,9 +13,10 @@ app.post("/generate-pdf", async (req, res) => {
     const invoiceData = req.body;
     const html = generateInvoiceHTML(invoiceData);
 
-    const browser = await puppeteer.launch({
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
-    });
+   const browser = await puppeteer.launch({
+  executablePath: "/opt/render/.cache/puppeteer/chrome/linux-121.0.6167.85/chrome-linux64/chrome",
+  args: ["--no-sandbox", "--disable-setuid-sandbox"]
+});
 
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: "networkidle0" });
