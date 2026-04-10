@@ -334,8 +334,8 @@ function generateInvoiceHTML(data) {
     </div>
    <div class="logo-cell"> 
 <img 
-  src="http://localhost:3000/Logo/MAULI.png"
-  style="width:120px; display:block; margin:auto;"
+  src="https://mauli-solar-solutions-invoice-web-app.onrender.com/Logo/MAULI.png"
+  style="width:120px; display:block; margin:auto;" 
 />
 </div>
   </div>
