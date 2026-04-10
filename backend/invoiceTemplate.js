@@ -326,11 +326,12 @@ function generateInvoiceHTML(data) {
   <!-- HEADER -->
   <div class="header-grid">
     <div class="supplier-info">
-      <p class="company-name">Mauli Solar Solution</p>
+      <p class="company-name">Mauli Solar Solutions</p>
       <p>Jayshri Nagar, Court Road, Warud</p>
       <p>Ta. Warud Dist. Amravati</p>
       <p>Amravati - 444906, Maharashtra.</p>
       <p>E- Mail : narendrasonare5@gmail.com</p>
+      <p>Phone No : 9689698325</p>
     </div>
    <div class="logo-cell"> 
 <img 
