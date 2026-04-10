@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const puppeteer = require("puppeteer");
@@ -13,7 +14,6 @@ app.post("/generate-pdf", async (req, res) => {
     const html = generateInvoiceHTML(invoiceData);
 
     const browser = await puppeteer.launch({
-      headless: "new",
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
     });
 
@@ -45,3 +45,9 @@ app.get("/health", (req, res) => res.json({ status: "ok" }));
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Invoice server running on http://localhost:${PORT}`));
+
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
+});
